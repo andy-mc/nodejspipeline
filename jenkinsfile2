@@ -15,7 +15,7 @@ node {
    }                   
    stage('Docker Build & Push') {
      docker.withRegistry('https://registry.hub.docker.com', 'docker-hub') {
-      def nuestraapp = docker.build("andy-mc/nodejsapp:${gitcommit}", ".")
+      def nuestraapp = docker.build("quemasandy/nodejsapp:${gitcommit}", ".")
       nuestraapp.push()
      }
    }
